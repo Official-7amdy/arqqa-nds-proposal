@@ -714,7 +714,9 @@ button,a,[role=button],figure,.post{touch-action:manipulation}
 #gate .st::before{display:none}
 #top{padding-top:max(14px,env(safe-area-inset-top))}
 #segs{top:env(safe-area-inset-top)}
-#menu,#guide,#lb,#guide .card,.hzs,.btabs,.stabs,.rlist,.tscroll{overscroll-behavior:contain}
+#menu,#guide,#lb,#guide .card{overscroll-behavior:contain}
+/* sideways strips: keep horizontal swipes inside, but let vertical scrolling pass through to the page */
+.hzs,.btabs,.stabs,.rlist,.tscroll{overscroll-behavior-x:contain;overscroll-behavior-y:auto}
 #menu .x{top:max(16px,env(safe-area-inset-top))}
 #lb .x{top:max(16px,env(safe-area-inset-top))}
 #toast{bottom:calc(84px + env(safe-area-inset-bottom))}
